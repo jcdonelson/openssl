@@ -391,6 +391,7 @@ int mainreq(void)
 	BIO_free(bio_err);
 	return(0);
 }
+//
 /*
  static void callback(int p, int n, void *arg)
  {
