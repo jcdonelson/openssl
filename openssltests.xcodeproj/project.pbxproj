@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FDD7635A193C199600DC7327 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDD76359193C199600DC7327 /* main.cpp */; };
 		FDD7635C193C199600DC7327 /* openssltests.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FDD7635B193C199600DC7327 /* openssltests.1 */; };
+		FDD76363193C1C3B00DC7327 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD76362193C1C3B00DC7327 /* libssl.a */; };
+		FDD76365193C1C5200DC7327 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDD76364193C1C5200DC7327 /* libcrypto.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,8 @@
 		FDD76356193C199600DC7327 /* openssltests */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = openssltests; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDD76359193C199600DC7327 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FDD7635B193C199600DC7327 /* openssltests.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = openssltests.1; sourceTree = "<group>"; };
+		FDD76362193C1C3B00DC7327 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libssl.a; path = ../../Frameworks/openssl_static/openssl_x86_64/libssl.a; sourceTree = "<group>"; };
+		FDD76364193C1C5200DC7327 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcrypto.a; path = ../../Frameworks/openssl_static/openssl_x86_64/libcrypto.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDD76365193C1C5200DC7327 /* libcrypto.a in Frameworks */,
+				FDD76363193C1C3B00DC7327 /* libssl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +50,8 @@
 		FDD7634D193C199600DC7327 = {
 			isa = PBXGroup;
 			children = (
+				FDD76364193C1C5200DC7327 /* libcrypto.a */,
+				FDD76362193C1C3B00DC7327 /* libssl.a */,
 				FDD76358193C199600DC7327 /* openssltests */,
 				FDD76357193C199600DC7327 /* Products */,
 			);
@@ -197,6 +205,15 @@
 		FDD76360193C199600DC7327 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jimdonelson/Frameworks/openssl_static/openssl_x86_64/include,
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jimdonelson/Frameworks/openssl_static/openssl_x86_64/,
+					/Users/jimdonelson/Frameworks/openssl_static/openssl_x86_64,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +221,15 @@
 		FDD76361193C199600DC7327 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jimdonelson/Frameworks/openssl_static/openssl_x86_64/include,
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/Users/jimdonelson/Frameworks/openssl_static/openssl_x86_64/,
+					/Users/jimdonelson/Frameworks/openssl_static/openssl_x86_64,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
