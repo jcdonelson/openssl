@@ -5,6 +5,8 @@
 //  Created by james donelson on 5/26/14.
 //  Copyright (c) 2014 james donelson. All rights reserved.
 //
+// Need to set include paths and libs for your system.
+// see https://gist.github.com/tmiz/1441111 for building openssl on osx.
 
 #include <iostream>
 #include <stdio.h>
