@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 james donelson. All rights reserved.
 //
 // Need to set include paths and libs for your system.
+// If you have mis-matched includes and libs you will get a fault.
 // see https://gist.github.com/tmiz/1441111 for building openssl on osx.
 
 #include <iostream>
